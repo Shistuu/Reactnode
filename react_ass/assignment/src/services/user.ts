@@ -1,10 +1,7 @@
 import { get, post } from "./axios";
 
 export const fetchUser = async () => {
-  const { data, ...other } = await get("/users/allUsers");
-
-  // const { data, ...other } = await get("localhost:4004/users/allUsers");
-  console.log("data", data, other);
+  const { data } = await get("/users/allUsers");
 
   return data;
 };
