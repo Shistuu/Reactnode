@@ -1,10 +1,4 @@
-import { get, post } from "./axios";
-
-export const fetchUser = async () => {
-  const { data } = await get("/users/allUsers");
-
-  return data;
-};
+import { post } from "./axios";
 
 export const registerUser = async (userData: any) => {
   const data = await post("/users/users", { body: userData });
