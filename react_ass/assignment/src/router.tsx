@@ -11,7 +11,7 @@ function Router() {
       <Routes>
         <Route path="/" element={<LoginForm />} />
         <Route path="login" element={<LoginForm />} />
-        <Route path="signup" element={<SignupForm />} />
+        <Route path="/signup" element={<SignupForm />} />
         <Route
           path="product"
           element={

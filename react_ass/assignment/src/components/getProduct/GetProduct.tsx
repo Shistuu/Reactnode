@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { fetchProduct } from "../../services/product";
+import "./GetProducts.css";
 
 interface Product {
   id: number;
@@ -22,7 +23,7 @@ function GetProducts() {
   }, []);
 
   return (
-    <>
+    <div className="products-container">
       {products.map((product) => {
         return (
           <div className="product-card" key={product.id}>
@@ -35,7 +36,7 @@ function GetProducts() {
           </div>
         );
       })}
-    </>
+    </div>
   );
 }
 
