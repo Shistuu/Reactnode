@@ -13,7 +13,6 @@ const AddProductForm: React.FC = () => {
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
     const productData = { productName, quantity, price, remark, description };
-    console.log(productData);
     await addProduct(productData);
     navigate("/product", { replace: true });
   };

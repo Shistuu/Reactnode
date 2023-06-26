@@ -28,16 +28,13 @@ export const createProduct = async (req: any, res: Response) => {
 
 export const getProduct = async (req: Request, res: Response) => {
   try {
-    console.log(req);
     const products = await prisma.product.findMany();
-    console.log(products);
     if (!products) {
       return res.status(404).json({ error: "Product not found" });
     }
 
     res.json(products);
   } catch (error) {
-    console.log("error");
     res.status(500).json({ error: "Failed to retrieve product" });
   }
 };

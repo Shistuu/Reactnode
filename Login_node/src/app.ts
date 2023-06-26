@@ -10,6 +10,4 @@ app.use(express.json() as RequestHandler);
 app.use(cors());
 app.use(routes);
 
-app.listen(3002, () => {
-  console.log(`Server running on PORT 3002`);
-});
+app.listen(3002, () => {});

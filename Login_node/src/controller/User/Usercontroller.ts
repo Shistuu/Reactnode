@@ -63,7 +63,6 @@ export const getUser = async (req: Request, res: Response) => {
 
     res.json(user);
   } catch (error) {
-    console.log(error);
     res.status(500).json({ error: "Failed to retrieve user" });
   }
 };

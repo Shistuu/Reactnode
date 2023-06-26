@@ -28,13 +28,11 @@ export const get = async (
   })
     .then((response) => response)
     .catch((error) => {
-      console.log(error);
       throw error?.response?.data;
     });
 };
 
 export const post = async (url: string, { params = {}, body = {} }) => {
-  console.log("POST");
   return instance({
     url,
     params,
